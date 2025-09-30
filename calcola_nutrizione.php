@@ -16,6 +16,7 @@ if (isset($valoriNutrizionali[$alimento]) && $quantita > 0) {
     $calorie = $nutrizione['calorie'] * $quantita;
     $proteine = $nutrizione['proteine'] * $quantita;
     $carboidrati = $nutrizione['carboidrati'] * $quantita;
+    $grassi = $nutrizione['grassi'] * $quantita;
 
     echo "<h1>Risultato Calcolo Nutrizione</h1>";
     echo "<p>Alimento: " . htmlspecialchars($alimento) . "</p>";
@@ -23,6 +24,7 @@ if (isset($valoriNutrizionali[$alimento]) && $quantita > 0) {
     echo "<p>Calorie: " . round($calorie, 2) . " kcal</p>";
     echo "<p>Proteine: " . round($proteine, 2) . " g</p>";
     echo "<p>Carboidrati: " . round($carboidrati, 2) . " g</p>";
+    echo "<p>Grassi: " . round($grassi, 2) . " g</p>";
 } else {
     echo "<p>Errore: alimento non valido o quantità non corretta.</p>";
 }
